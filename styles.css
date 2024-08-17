@@ -1,0 +1,161 @@
+/*
+1.Set the background color
+2. set the font color
+3. Describe the display style of the navbar and position it's elements
+4. resize logo and position it
+5. display links in row format,remove the underlined text design,list dot and blue color
+6. Style the button
+7. Style the section for the text and images
+8. Make sure elements are positioned proprly
+9. Style the text in div 1
+10. Wrap the buttons in a div and display them in a row with gap
+11.style the image in the right div
+
+
+
+Hints:
+1. div{
+  display: flex;
+  flex-direction: row or column;
+  align-items: flex-start,end, center e.t.c;
+  justify-contents: similar to align-items;
+  border-radius: to design borders
+  ///for images
+  height: 100vh(height of screen) or 100px or em or rem...;
+  width: Takes same values as height
+}
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #efefef;
+}
+
+nav {
+  display: flex;
+  height: 8vh;
+  flex: row;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+
+.links > ul {
+  display: flex;
+  justify-content: space-between;
+  width: 40vw;
+}
+
+li {
+  list-style: none;
+}
+
+li > a {
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 1.3rem;
+  font-weight: 100;
+  text-transform: capitalize;
+}
+
+li > a:hover {
+  color: blueviolet;
+}
+
+button {
+  padding: 0.7rem 1.7rem;
+  border: 1px solid blueviolet;
+  border-radius: 5px;
+  background-color: blueviolet;
+  color: #efefef;
+  font-size: 1rem;
+  transition: ease 0.1s;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+}
+
+button:hover {
+  color: blueviolet;
+  background-color: #efefef;
+}
+
+header {
+  width: 100vw;
+  height: 92vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-text {
+  padding: 7rem 1rem 0 2rem;
+}
+
+.header-text > h1 {
+  font-size: 6rem;
+  font-family: "Times New Roman", Times, serif;
+  margin-bottom: 2rem;
+}
+
+.different {
+  color: blueviolet;
+}
+
+.header-text > p {
+  padding-bottom: 2rem;
+  font-size: 20px;
+  font-family: "Times New Roman", Times, serif;
+  line-height: 1.4;
+}
+
+.header-text-button {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.second-btn {
+  color: blueviolet;
+  background-color: #efefef;
+}
+
+.second-btn:hover {
+  color: #efefef;
+  background-color: blueviolet;
+}
+
+.header-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5rem;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column-reverse;
+    height: 100%;
+  }
+
+  .links > ul {
+    display: none;
+  }
+  .header-text {
+    text-align: center;
+  }
+  h1 {
+    font-size: 15px;
+  }
+  .header-image {
+    padding: 0;
+    width: 80vw;
+    margin: auto;
+  }
+  .header-text-button {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+}
